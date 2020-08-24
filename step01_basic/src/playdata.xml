@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- People이라는 일반 클래스를 Spring bean으로 등록
+		 Spring bean : spring framework이 관리(생성, 삭제)하는 클래스의 instance 의미
+			 -->
+			 
+	<!-- step 01 : 기본 생성자 -->
+	<bean id = "p1" class="model.domain.People"></bean>
+	<bean id = "p2" class="model.domain.People" scope = "singleton"></bean>
+	<bean id = "p3" class="model.domain.People" scope = "prototype"></bean>
+	
+	<!-- step02 : 특정 데이터 값으로 Spring bean 객체 생성  : parameter가 있는 생성자 호출 -->
+	<bean id = "p11" class="model.domain.People">
+		<constructor-arg name="name" value="LBH" />
+		<constructor-arg name="age" value="28" />
+	</bean>
+	<bean id = "p12" class="model.domain.People">
+		<constructor-arg>
+			<value>MIU</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>14</value>
+		</constructor-arg>
+	</bean>
+	
+	<!-- step03 : setter injection 사용 실습 -->
+	<bean id = "p21" class = "model.domain.People">
+		<property name="name" value = "NAM"/>
+	</bean>
+</beans>
