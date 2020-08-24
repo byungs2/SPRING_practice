@@ -14,3 +14,14 @@
 	- java source
 		- @Autowired : 타입을 기준으로 의존 객체 주입에 적용
 					   위치 - member 변수 선언구 or setter 선언구
+					  
+3. step03
+	- xml에 <bean> tag 설정 없이 자바 소스에서 bean으로 등록하는 설정
+	- xml 문서
+		<context:annotation-config/>
+		<context:component-scan base-package="package name"/>
+		
+	- Spring bean으로 등록할 클래스 선언구
+		@Component
+		@Scope("prototype") 
+	

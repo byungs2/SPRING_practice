@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/playdata.xml</config>
 		<config>src/playdata2.xml</config>
+		<config>src/playdata3.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
