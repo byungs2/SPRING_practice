@@ -10,7 +10,7 @@ public class Test3 {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("playdata3.xml");
-		People p1 = (People)context.getBean("people");
+		People p1 = (People)context.getBean("p");
 		System.out.println(p1.getCar());
 	}
 }

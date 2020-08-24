@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import lombok.Getter;
 
 @Getter
-@Component //<bean id = "people" class = "step03.model.domain.copy.People>이라는 뜻
+@Component("p") //<bean id = "people" class = "step03.model.domain.copy.People>이라는 뜻
 @Scope("prototype") //scope type 설정
 public class People {
 	private String name;

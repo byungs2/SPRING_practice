@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- People이라는 일반 클래스를 Spring bean으로 등록
@@ -29,5 +30,9 @@
 	<!-- step03 : setter injection 사용 실습 -->
 	<bean id = "p21" class = "model.domain.People">
 		<property name="name" value = "NAM"/>
+	</bean>
+	
+	<!-- step04 : p prefix -->
+	<bean id = "p22" class = "model.domain.People" p:name = "Lee">
 	</bean>
 </beans>
