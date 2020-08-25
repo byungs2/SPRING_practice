@@ -7,7 +7,7 @@ import step04.model.domain.People;
 
 
 public class Test4 {
-
+	
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("playdata4.xml");
 		People p1 = (People)context.getBean("p");
