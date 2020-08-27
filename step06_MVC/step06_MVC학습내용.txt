@@ -1,0 +1,66 @@
+Spring MVC(Spring @MVC) 학습 내용
+
+1. API & annotation
+	1. ModelAndView
+		Model 과 View 작업 분리
+	2. Model
+	3. @ModelAttribute
+	4. @PathVariable
+	5. @Controller
+		-@Component는 해도 돼지만 의미 부여용 Controller, service 로 가능(Component 고집하면 똥고집, 협업)
+	6. @RequestMapping("")
+		@RequestMapping(value="", method=)
+	7. @ExceptionHandler
+	8. @RequestParm
+	
+2. web page 이동
+	1. web.xml에 spring front controller(Dispatcherservlet) 등록
+	2. 설정 파일(dispatcher-servlet.xml)에 스프링 빈으로 등록
+		InternalResourceViewResolver
+	3. 이동 기술
+		1.forward
+			String 반환 메소드
+				return "forward:file명.jsp"
+				return "file명.jsp"
+			ModelAndView 반환 메소드
+				view 이름만 설정
+				setViewName("?")
+		2. redirect
+			String 반환 메소드
+				return "redirect:file명.jsp"
+				
+		3. 주의사항
+			/ 적용 여부 예민
+			/ projecct명 즉 context path 값으로 인지
+			
+
+-- step01과 step02 단계 학습 내용 end --
+
+-- step03 : 세션과 쿠키
+1. session tracking
+	client 상태 유지를 하면서 web page 이동 기술 의미
+2. 종류
+	1. hidden tag
+	2. Cookie
+	3. HttpSession
+		getSession()
+		setAttribute("key", ..)
+		getAttribute() - set은 필수
+		removeAttribute()
+		invalidate()
+		null
+	
+3. @Controller
+	1. 일반 클래스로 개발. 단, 이 자체가 내부적으로 servlet으로 반환된다 생각
+	2. 일반 servlet API로 개발 가능
+	3. 애노테이션으로도 처리 가능
+	
+4. 세션 특징
+	1. 생성 후 서버 메모리 저장, 코드로 무효화 하거나 아니면 서버 자체가 꺼지면 삭제된다.
+	2. 개발시 주의사항
+		1. HttpSession API로 관리할 거라면 일관적인 방법으로 Session객체 생성 및 삭제 해야한다.
+		2. @SessionAttribute({session key name})로 사용할 경우에도 일관성 있게 Spring Session API로 사용 권장
+		
+		
+		
+		

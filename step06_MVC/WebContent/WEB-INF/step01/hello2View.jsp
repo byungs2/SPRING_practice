@@ -17,7 +17,7 @@
 	2. 요청 객체에 저장된 id : ${requestScope.id}<br>
 	
 	3. web query string으로 전송된 id : ${param.id} <br>
-	
+		<%--request.getParameter("id") --%>
 	<br><hr><br>
 	<a href="${pageContext.request.contextPath}/step01Index.html">메인 화면으로 이동 </a>
 		

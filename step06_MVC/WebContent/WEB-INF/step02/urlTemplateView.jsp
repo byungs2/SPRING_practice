@@ -10,6 +10,6 @@
 
 urlTemplateView.jsp <br><hr><br>
 
-${requestScope.id}-${requestScope.age}-${requestScope.name}
+${requestScope.id}-${requestScope.age}
 </body>
 </html>
